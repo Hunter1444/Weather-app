@@ -1,0 +1,48 @@
+.current-weather{
+  display:flex;
+  flex-direction: column;
+  margin-top:30px;
+}
+.loader{
+  display:flex;
+  width:100%;
+  height:100vh;
+  justify-content: center;
+  align-items: center;
+  background: url('img/Spinner.svg') center no-repeat;
+}
+
+.addCity{
+  &__form{
+    display:flex;
+  }
+}
+
+.city-list{
+  margin-top:25px;
+
+  li{
+    display:flex;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+
+    &:hover .city-list__remove{
+      display:block;
+    }
+  }
+
+  &__remove{
+    cursor:pointer;
+    margin-left:15px;
+    display:none;
+  }
+
+  &__city{
+    width:150px;
+  }
+
+  &__temp{
+    width:25px;
+    margin-right:15px;
+  }
+}
